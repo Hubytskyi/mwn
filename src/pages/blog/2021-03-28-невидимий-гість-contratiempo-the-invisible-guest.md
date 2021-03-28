@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Невидимий гість / Contratiempo / The Invisible Guest
-slug: "contratiempo "
+slug: the-invisible-guest
 date: 2021-03-28T12:33:28.432Z
 description: "Молодий і талановитий бізнесмен Адріан Дория володіє всім, що
   необхідно для щастя: він багатий, успішний, отримав світове визнання, любимо
