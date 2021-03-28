@@ -1,0 +1,27 @@
+footer {
+  @include font(vw1920(14px), vw1920(18px));
+  padding: $gap 0;
+  border-top: 1px dashed $main;
+
+  /* Media */
+  @include laptop {
+    @include font(vw1600(14px), vw1600(18px));
+  }
+  @include large {
+    @include font(vw1366(14px), vw1366(18px));
+  }
+  @include tabletL {
+    @include font(vw1024(14px), vw1024(18px));
+  }
+  @include tablet {
+    @include font(vw768(14px), vw768(18px));
+  }
+  @include mobile {
+    @include font(12px, 18px);
+  }
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+}

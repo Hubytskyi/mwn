@@ -1,0 +1,56 @@
+.posts__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $gap;
+  grid-row-gap: $gap;
+
+  /* Media */
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+.post__card {
+  border: 1px solid rgba($main, .4);
+  box-shadow: 0px 3px 8px 0px rgba(57, 74, 77, 0.15);
+}
+
+.post__thumbnail {
+  height: vw1920(400px);
+
+  /* Media */
+  @include laptop {
+    height: vw1600(400px);
+  }
+  @include large {
+    height: vw1366(400px);
+  }
+  @include tabletL {
+    height: vw1024(360px);
+  }
+  @include tablet {
+    height: vw768(360px);
+  }
+  @include mobile {
+    height: 300px;
+  }
+}
+
+.post__meta {
+  padding: $gap;
+}
+
+.post__short-description {
+  padding: 0 $gap;
+}
+
+.post__title {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.post__button {
+  padding: $gap;
+  display: block;
+}

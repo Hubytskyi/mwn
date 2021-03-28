@@ -9,51 +9,51 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
-        {posts &&
+        <ul className="posts__list">
+          {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+              <li className="post__card" key={post.id}>
+                <article
+                    className={`blog-list-item tile is-child box notification ${
+                        post.frontmatter.featuredpost ? 'is-featured' : ''
+                    }`}
+                >
+                  <header>
+                    {post.frontmatter.featuredimage ? (
+                        <div className="post__thumbnail">
+                          <PreviewCompatibleImage
+                              imageInfo={{
+                                image: post.frontmatter.featuredimage,
+                                alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                              }}
+                          />
+                        </div>
+                    ) : null}
+                    <div className="post__meta">
+                      <Link
+                          className="post__title"
+                          to={post.fields.slug}
+                      >
+                        <h2>{post.frontmatter.title}</h2>
+                      </Link>
+                      <div className="post__date-block text__small">
+                        <span> &bull; </span>
+                        <span className="post__date">
                       {post.frontmatter.date}
                     </span>
+                      </div>
+                    </div>
+                  </header>
+                  <p className="post__short-description">
+                    {post.excerpt}
                   </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
+                  <Link className="post__button" to={post.fields.slug}>
+                    Детальніше →
                   </Link>
-                </p>
-              </article>
-            </div>
+                </article>
+              </li>
           ))}
-      </div>
+        </ul>
     )
   }
 }
@@ -67,8 +67,8 @@ BlogRoll.propTypes = {
 }
 
 export default () => (
-  <StaticQuery
-    query={graphql`
+    <StaticQuery
+        query={graphql`
       query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
@@ -99,6 +99,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
-  />
+        render={(data, count) => <BlogRoll data={data} count={count} />}
+    />
 )

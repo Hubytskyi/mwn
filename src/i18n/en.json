@@ -1,0 +1,13 @@
+{
+  "genre": {
+    "Crime": "Кримінал",
+    "Drama": "Драма",
+    "Mystery": "Містика",
+    "Thriller": "Трилер",
+    "Detective": "Детектив"
+  },
+  "type": {
+    "movie": "Фільм",
+    "series": "Серіал"
+  }
+}
