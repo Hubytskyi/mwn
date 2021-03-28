@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 
@@ -13,18 +13,10 @@ export const IndexPageTemplate = ({
                                       description,
                                       intro,
                                   }) => (
-    <section className="section section--gradient">
+    <section className="section">
         <div className="container">
-            <div className="section">
-                <div className="columns">
-                    <div className="column is-10 is-offset-1">
-                        <div className="content">
-                            <div className="column is-12">
-                                <BlogRoll />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="row">
+                <BlogRoll/>
             </div>
         </div>
     </section>
@@ -43,8 +35,8 @@ IndexPageTemplate.propTypes = {
     }),
 }
 
-const IndexPage = ({ data }) => {
-    const { frontmatter } = data.markdownRemark
+const IndexPage = ({data}) => {
+    const {frontmatter} = data.markdownRemark
 
     return (
         <Layout>
