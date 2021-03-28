@@ -45,14 +45,15 @@
 
   a {
     color: $darkgreen;
+    text-decoration: underline;
   }
 
   tr {
     width: 100%;
-    border: 1px solid rgba($main, .2);
 
     td {
-      padding: 5px;
+      padding: 8px;
+      border: 1px solid rgba($main, .2);
     }
 
     td:first-child {

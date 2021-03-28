@@ -4,6 +4,8 @@
 @import "components/footer";
 @import "components/posts";
 @import "components/article";
+@import "components/tags";
+@import "components/tags-posts";
 
 body {
   @include font(vw1920($fontsize), vw1920($lineheight));

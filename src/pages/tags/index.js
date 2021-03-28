@@ -1,41 +1,37 @@
 import React from 'react'
-import { kebabCase } from 'lodash'
-import { Helmet } from 'react-helmet'
-import { Link, graphql } from 'gatsby'
+import {kebabCase} from 'lodash'
+import {Helmet} from 'react-helmet'
+import {Link, graphql} from 'gatsby'
 import Layout from '../../components/Layout'
+import {i18n} from "../../i18n";
 
 const TagsPage = ({
-  data: {
-    allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
-  },
-}) => (
-  <Layout>
-    <section className="section">
-      <Helmet title={`Tags | ${title}`} />
-      <div className="container content">
-        <div className="columns">
-          <div
-            className="column is-10 is-offset-1"
-            style={{ marginBottom: '6rem' }}
-          >
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
-            <ul className="taglist">
-              {group.map((tag) => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  </Layout>
+                      data: {
+                          allMarkdownRemark: {group},
+                          site: {
+                              siteMetadata: {title},
+                          },
+                      },
+                  }) => (
+    <Layout>
+        <section className="tags">
+            <Helmet title={`Tags | ${title}`}/>
+            <div className="container">
+                <div className="row">
+                    <h1 className="tags__title">Жанри:</h1>
+                    <ul className="taglist">
+                        {group.map((tag) => (
+                            <li key={tag.fieldValue}>
+                                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                                    {i18n(`genre.${tag.fieldValue}`)} ({tag.totalCount})
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </Layout>
 )
 
 export default TagsPage

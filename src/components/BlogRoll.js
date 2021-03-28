@@ -4,6 +4,7 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
+
     render() {
         const { data } = this.props
         const { edges: posts } = data.allMarkdownRemark
@@ -13,6 +14,7 @@ class BlogRoll extends React.Component {
                 {posts &&
                 posts.map(({ node: post }) => (
                     <li className="post__card" key={post.id}>
+                        {console.log(post)}
                         <article
                             className={`blog-list-item tile is-child box notification ${
                                 post.frontmatter.featuredpost ? 'is-featured' : ''
@@ -88,7 +90,7 @@ export default () => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid {
                       ...GatsbyImageSharpFluid
                     }
                   }

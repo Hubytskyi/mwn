@@ -1,0 +1,12 @@
+.tags {
+  .taglist {
+    flex-direction: column;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.tags__title {
+  margin-bottom: $gap;
+}

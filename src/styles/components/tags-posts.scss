@@ -1,0 +1,18 @@
+.tags-posts {
+  .taglist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: $gap;
+    grid-row-gap: $gap;
+    margin-bottom: $gap;
+
+    /* Media */
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.tags-posts__title {
+  margin-bottom: $gap;
+}

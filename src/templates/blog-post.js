@@ -63,6 +63,10 @@ export const BlogPostTemplate = ({
                                             </tr>
                                         ) : null}
                                         <tr>
+                                            <td>Режисер:</td>
+                                            <td>{imdb.imdb.Director}</td>
+                                        </tr>
+                                        <tr>
                                             <td>Актори:</td>
                                             <td>{imdb.imdb.Actors}</td>
                                         </tr>
@@ -73,6 +77,14 @@ export const BlogPostTemplate = ({
                                         <tr>
                                             <td>Рік:</td>
                                             <td>{imdb.imdb.Year}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Країна:</td>
+                                            <td>{imdb.imdb.Country}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Тривалість:</td>
+                                            <td>{imdb.imdb.Runtime}</td>
                                         </tr>
                                         </tbody>
                                     </table>
