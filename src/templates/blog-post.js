@@ -105,7 +105,7 @@ const BlogPost = ({data}) => {
     const [imdb, setImdb] = useState({})
 
     useEffect(() => {
-        axios.get(`http://www.omdbapi.com/?apikey=78f8c2e&i=${post.frontmatter.imdbid}&plot=full`).then(res => {
+        axios.get(`https://www.omdbapi.com/?apikey=78f8c2e&i=${post.frontmatter.imdbid}&plot=full`).then(res => {
             setImdb({imdb: res.data, imdbLoaded: true})
         })
     }, [])
