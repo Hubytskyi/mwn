@@ -9,17 +9,16 @@ import axios from 'axios';
 import star from '../img/star.svg'
 import {i18n} from "../i18n";
 
-
-
 export const BlogPostTemplate = ({
                                      content,
                                      contentComponent,
                                      description,
                                      tags,
                                      title,
-                                     helmet
+                                     helmet,
+                                     imdb
                                  }) => {
-
+    console.log(imdb)
 
     const PostContent = contentComponent || Content
 
@@ -31,54 +30,54 @@ export const BlogPostTemplate = ({
                 <div className="row">
                     <div className="article__inner">
                         <h1 className="article__title">{title}</h1>
-                        {/*{imdb.imdbLoaded ?*/}
-                        {/*    <div className="article__top">*/}
-                        {/*        <div className="article__top--left">*/}
-                        {/*            <img className="article__poster" src={imdb.imdb.Poster} alt=""/>*/}
-                        {/*        </div>*/}
-                        {/*        <div className="article__top-right">*/}
-                        {/*            <table className="article__info">*/}
-                        {/*                <tbody>*/}
-                        {/*                <tr>*/}
-                        {/*                    <td>IMDb:</td>*/}
-                        {/*                    <td><img className="article__info-star"*/}
-                        {/*                             src={star}*/}
-                        {/*                             alt=""/><span*/}
-                        {/*                        className="text__dark-bold">{imdb.imdb.imdbRating}</span> / 10 <span*/}
-                        {/*                        className="text__light">({imdb.imdb.imdbVotes})</span>*/}
-                        {/*                    </td>*/}
-                        {/*                </tr>*/}
-                        {/*                {tags && tags.length ? (*/}
-                        {/*                    <tr>*/}
-                        {/*                        <td>Жанр:</td>*/}
-                        {/*                        <td>*/}
-                        {/*                            <ul className="taglist">*/}
-                        {/*                                {tags.map((tag) => (*/}
-                        {/*                                    <li key={tag + `tag`}>*/}
-                        {/*                                        <Link*/}
-                        {/*                                            to={`/tags/${kebabCase(tag)}/`}>{i18n(`genre.${tag}`)}</Link>*/}
-                        {/*                                    </li>*/}
-                        {/*                                ))}*/}
-                        {/*                            </ul>*/}
-                        {/*                        </td>*/}
-                        {/*                    </tr>*/}
-                        {/*                ) : null}*/}
-                        {/*                <tr>*/}
-                        {/*                    <td>Актори:</td>*/}
-                        {/*                    <td>{imdb.imdb.Actors}</td>*/}
-                        {/*                </tr>*/}
-                        {/*                <tr>*/}
-                        {/*                    <td>Тип:</td>*/}
-                        {/*                    <td>{i18n(`type.${imdb.imdb.Type}`)}</td>*/}
-                        {/*                </tr>*/}
-                        {/*                <tr>*/}
-                        {/*                    <td>Рік:</td>*/}
-                        {/*                    <td>{imdb.imdb.Year}</td>*/}
-                        {/*                </tr>*/}
-                        {/*                </tbody>*/}
-                        {/*            </table>*/}
-                        {/*        </div>*/}
-                        {/*    </div> : '...'}*/}
+                        {imdb.imdbLoaded ?
+                            <div className="article__top">
+                                <div className="article__top--left">
+                                    <img className="article__poster" src={imdb.imdb.Poster} alt=""/>
+                                </div>
+                                <div className="article__top-right">
+                                    <table className="article__info">
+                                        <tbody>
+                                        <tr>
+                                            <td>IMDb:</td>
+                                            <td><img className="article__info-star"
+                                                     src={star}
+                                                     alt=""/><span
+                                                className="text__dark-bold">{imdb.imdb.imdbRating}</span> / 10 <span
+                                                className="text__light">({imdb.imdb.imdbVotes})</span>
+                                            </td>
+                                        </tr>
+                                        {tags && tags.length ? (
+                                            <tr>
+                                                <td>Жанр:</td>
+                                                <td>
+                                                    <ul className="taglist">
+                                                        {tags.map((tag) => (
+                                                            <li key={tag + `tag`}>
+                                                                <Link
+                                                                    to={`/tags/${kebabCase(tag)}/`}>{i18n(`genre.${tag}`)}</Link>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        ) : null}
+                                        <tr>
+                                            <td>Актори:</td>
+                                            <td>{imdb.imdb.Actors}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Тип:</td>
+                                            <td>{i18n(`type.${imdb.imdb.Type}`)}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Рік:</td>
+                                            <td>{imdb.imdb.Year}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div> : '...'}
                         <div className="article__short-description">
                             {description}
                         </div>
@@ -151,6 +150,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        imdbid
         tags
       }
     }
