@@ -4,7 +4,8 @@
     "Drama": "Драма",
     "Mystery": "Містика",
     "Thriller": "Трилер",
-    "Detective": "Детектив"
+    "Detective": "Детектив",
+    "History": "Історичний"
   },
   "type": {
     "movie": "Фільм",

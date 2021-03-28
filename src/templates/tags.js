@@ -10,6 +10,7 @@ class TagRoute extends React.Component {
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map((post) => (
         <li className="post__card" key={post.node.id}>
+          {console.log(post)}
           <article
               className={`blog-list-item tile is-child box notification ${
                   post.node.frontmatter.featuredpost ? 'is-featured' : ''
@@ -97,6 +98,7 @@ export const tagPageQuery = graphql`
             slug
           }
           frontmatter {
+            slug
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")

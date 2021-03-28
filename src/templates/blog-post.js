@@ -18,7 +18,6 @@ export const BlogPostTemplate = ({
                                      helmet,
                                      imdb
                                  }) => {
-    console.log(imdb)
 
     const PostContent = contentComponent || Content
 
