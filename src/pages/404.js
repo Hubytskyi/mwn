@@ -2,12 +2,16 @@ import React from 'react'
 import Layout from '../components/Layout'
 
 const NotFoundPage = () => (
-  <Layout>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
-  </Layout>
+    <Layout>
+        <section>
+            <div className="container">
+                <div className="row">
+                    <h1>НЕ ЗНАЙДЕНО</h1>
+                    <p>Ви щойно потрапили на маршрут, якого не існує...</p>
+                </div>
+            </div>
+        </section>
+    </Layout>
 )
 
 export default NotFoundPage
