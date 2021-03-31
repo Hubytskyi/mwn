@@ -1,20 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import {Link, graphql, StaticQuery} from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
 
     render() {
-        const { data } = this.props
-        const { edges: posts } = data.allMarkdownRemark
+        const {data} = this.props
+        const {edges: posts} = data.allMarkdownRemark
 
         return (
             <ul className="posts__list">
                 {posts &&
-                posts.map(({ node: post }) => (
+                posts.map(({node: post}) => (
                     <li className="post__card" key={post.id}>
-                        {console.log(post)}
                         <article
                             className={`blog-list-item tile is-child box notification ${
                                 post.frontmatter.featuredpost ? 'is-featured' : ''
@@ -41,8 +40,8 @@ class BlogRoll extends React.Component {
                                     <div className="post__date-block text__small">
                                         <span> &bull; </span>
                                         <span className="post__date">
-                      {post.frontmatter.date}
-                    </span>
+                                          {post.frontmatter.date}
+                                        </span>
                                     </div>
                                 </div>
                             </header>
@@ -101,6 +100,6 @@ export default () => (
         }
       }
     `}
-        render={(data, count) => <BlogRoll data={data} count={count} />}
+        render={(data, count) => <BlogRoll data={data} count={count}/>}
     />
 )
