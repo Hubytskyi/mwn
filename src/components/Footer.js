@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="row">
             <div className="footer__inner">
               <span>Copyright ©{currentYear} All rights reserved.</span>
-              <span><a href="https://hubytskyi.com" target="_blank" rel="noreferrer"><img src={HubytskyiLogo} alt="hubytskyi"/></a></span>
+              <span><a href="https://hubytskyi.github.io/hm/" target="_blank" rel="noreferrer"><img src={HubytskyiLogo} alt="hubytskyi"/></a></span>
             </div>
           </div>
         </div>
