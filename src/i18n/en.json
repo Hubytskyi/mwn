@@ -11,7 +11,10 @@
     "Comedy": "Комедія",
     "Horror": "Жахи",
     "Action": "Бойовик",
-    "Adventure": "Пригоди"
+    "Adventure": "Пригоди",
+    "Biography": "Біографія",
+    "Romance": "Романтика"
+
   },
   "type": {
     "movie": "Фільм",
