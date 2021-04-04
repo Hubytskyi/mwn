@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Movies Worth Nothing',
     description:
-      'Movies are worthy of attention.',
+      'What you want to see before bed.',
   },
   plugins: [
     {
@@ -17,7 +17,7 @@ module.exports = {
           head: true,
         },
       },
-    },
+    },-
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
