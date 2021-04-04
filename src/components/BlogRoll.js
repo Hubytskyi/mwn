@@ -33,7 +33,7 @@ class BlogRoll extends React.Component {
                                 <div className="post__meta">
                                     <Link
                                         className="post__title"
-                                        to={post.fields.slug}
+                                        to={post.frontmatter.slug}
                                     >
                                         <h2>{post.frontmatter.title}</h2>
                                     </Link>
@@ -48,7 +48,7 @@ class BlogRoll extends React.Component {
                             <p className="post__short-description">
                                 {post.excerpt}
                             </p>
-                            <Link className="post__button" to={post.fields.slug}>
+                            <Link className="post__button" to={post.frontmatter.slug}>
                                 Детальніше →
                             </Link>
                         </article>
@@ -83,6 +83,7 @@ export default () => (
                 slug
               }
               frontmatter {
+                slug
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
