@@ -31,6 +31,7 @@ export const BlogPostTemplate = ({
                         <h1 className="article__title">{title}</h1>
                         {imdb.imdbLoaded ?
                             <div className="article__top">
+                                {console.log(imdb)}
                                 <div className="article__top--left">
                                     <img className="article__poster" src={imdb.imdb.Poster} alt=""/>
                                 </div>

@@ -14,6 +14,7 @@ class BlogRoll extends React.Component {
                 {posts &&
                 posts.map(({node: post}) => (
                     <li className="post__card" key={post.id}>
+                        {console.log(posts)}
                         <article
                             className={`blog-list-item tile is-child box notification ${
                                 post.frontmatter.featuredpost ? 'is-featured' : ''
