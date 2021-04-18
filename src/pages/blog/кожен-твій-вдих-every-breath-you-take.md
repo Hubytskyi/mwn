@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Кожен твій вдих / Every Breath You Take
 slug: every-breath-you-take
 date: 2021-04-18T16:10:35.477Z
-featuredimage: /img/screenshot-2021-04-01-5.38.32-pm.png
+featuredimage: /img/63872132321e354b3cf4125670d67395.750.425.jpeg
 tags:
   - Thriller
 imdbid: tt2231874
