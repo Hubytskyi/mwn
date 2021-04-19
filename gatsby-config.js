@@ -18,6 +18,42 @@ module.exports = {
     //     },
     //   },
     // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        "name": "Movies Worth Nothing",
+        "short_name": "MWN",
+        "theme_color": "#252B31",
+        "background_color": "#252B31",
+        "display": "standalone",
+        "orientation": "portrait",
+        "start_url": `/`,
+        icon: `src/img/favs/icon-192x192.png`,
+        "icons": [
+          {
+            "src": `src/img/favs/icon-192x192.png`,
+            "sizes": "192x192",
+            "type": "image/png"
+          },
+          {
+            "src": `src/img/favs/icon-256x256.png`,
+            "sizes": "256x256",
+            "type": "image/png"
+          },
+          {
+            "src": `src/img/favs/icon-384x384.png`,
+            "sizes": "384x384",
+            "type": "image/png"
+          },
+          {
+            "src": `src/img/favs/icon-512x512.png`,
+            "sizes": "512x512",
+            "type": "image/png"
+          }
+        ]
+      },
+    },
+    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
@@ -73,10 +109,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
+      resolve: 'gatsby-plugin-netlify-cms'
     },
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
