@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Темний спадок / Inheritance
+personalRating: "9"
 slug: inheritance
 date: 2021-04-18T13:10:22.479Z
 description: ""
