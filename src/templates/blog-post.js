@@ -46,6 +46,15 @@ export const BlogPostTemplate = ({
                                                 className="text__light">({imdb.imdb.imdbVotes})</span>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td>Особистий рейтинг:</td>
+                                            <td><img className="article__info-star"
+                                                     src={star}
+                                                     alt=""/><span
+                                                className="text__dark-bold">{imdb.imdb.imdbRating}</span> / 10 <span
+                                                className="text__light">({imdb.imdb.imdbVotes})</span>
+                                            </td>
+                                        </tr>
                                         {tags && tags.length ? (
                                             <tr>
                                                 <td>Жанр:</td>
