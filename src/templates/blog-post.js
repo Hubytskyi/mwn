@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import Content, {HTMLContent} from '../components/Content'
 import axios from 'axios';
 import star from '../img/star.svg'
+import star2 from '../img/star2.svg'
 import {i18n} from "../i18n";
 
 export const BlogPostTemplate = ({
@@ -16,9 +17,10 @@ export const BlogPostTemplate = ({
                                      tags,
                                      title,
                                      helmet,
-                                     imdb
+                                     imdb,
+                                     personalRating
                                  }) => {
-
+    console.log(personalRating)
     const PostContent = contentComponent || Content
 
     return (
@@ -49,10 +51,10 @@ export const BlogPostTemplate = ({
                                         <tr>
                                             <td>Особистий рейтинг:</td>
                                             <td><img className="article__info-star"
-                                                     src={star}
+                                                     src={star2}
                                                      alt=""/><span
-                                                className="text__dark-bold">{imdb.imdb.imdbRating}</span> / 10 <span
-                                                className="text__light">({imdb.imdb.imdbVotes})</span>
+                                                className="text__dark-bold">
+                                                {personalRating !== null ? personalRating : '-'}</span> / 10
                                             </td>
                                         </tr>
                                         {tags && tags.length ? (
@@ -137,6 +139,7 @@ const BlogPost = ({data}) => {
                 contentComponent={HTMLContent}
                 description={post.frontmatter.description}
                 imdb={imdb}
+                personalRating={post.frontmatter.personalRating}
                 helmet={
                     <Helmet titleTemplate="%s | Блог">
                         <title>{`${post.frontmatter.title}`}</title>
@@ -172,6 +175,7 @@ export const pageQuery = graphql`
         description
         imdbid
         tags
+        personalRating
       }
     }
   }
