@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Банкір / The Banker
+personalRating: "10"
 slug: the-banker
 date: 2021-04-18T16:12:09.628Z
 featuredimage: /img/the-banker.jpg
