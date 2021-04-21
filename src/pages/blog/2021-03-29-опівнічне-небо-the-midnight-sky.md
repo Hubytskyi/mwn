@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Опівнічне небо / The Midnight Sky
+personalRating: "8"
 slug: the-midnight-sky
 date: 2021-03-29T15:59:57.620Z
 description: ""
