@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Дівчина, яка боялася дощу / Fear of Rain
+personalRating: "10"
 slug: fear-of-rain
 date: 2021-04-04T16:07:44.525Z
 featuredimage: /img/49632685-1378096.jpg
