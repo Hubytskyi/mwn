@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Кожен твій вдих / Every Breath You Take
+personalRating: "9"
 slug: every-breath-you-take
 date: 2021-04-18T16:10:35.477Z
 featuredimage: /img/63872132321e354b3cf4125670d67395.750.425.jpeg
