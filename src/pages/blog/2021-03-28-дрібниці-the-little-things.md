@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Дрібниці / The Little Things
+personalRating: "10"
 slug: the-little-things
 date: 2021-03-28T21:41:08.313Z
 description: ""
