@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Ще по одній / Druk
+personalRating: "9"
 slug: druk
 date: 2021-04-04T16:29:40.184Z
 featuredimage: /img/another-round-04.jpg
