@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Аферистка / I Care a Lot
+personalRating: "9"
 slug: i-care-a-lot
 date: 2021-03-28T21:20:08.319Z
 description: ""
