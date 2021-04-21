@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Дрімленд / Dreamland
+personalRating: "9"
 slug: dreamland
 date: 2021-03-28T21:10:54.980Z
 description: ""
