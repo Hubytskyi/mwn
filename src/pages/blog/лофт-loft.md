@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Лофт / Loft
+personalRating: "10"
 slug: loft
 date: 2021-04-04T16:00:25.975Z
 featuredimage: /img/0c363c02aad8458ea374a569ba46.jpg
