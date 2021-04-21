@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Порожня людина / The Empty Man
+personalRating: "9"
 slug: the-empty-man
 date: 2021-04-04T16:27:42.272Z
 featuredimage: /img/no4bx8blyuabkszybrmtnqgih7ruv8x0byylgal-ios.jpg
