@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Новини з усього світу / News of the World
+personalRating: "9"
 slug: news-of-the-world
 date: 2021-04-04T16:17:23.565Z
 featuredimage: /img/qq56-1-1-1024x549.jpg
