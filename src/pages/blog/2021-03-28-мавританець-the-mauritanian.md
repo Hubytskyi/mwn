@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Мавританець / The Mauritanian
+personalRating: "10"
 slug: the-mauritanian
 date: 2021-03-28T21:14:45.658Z
 description: ""
