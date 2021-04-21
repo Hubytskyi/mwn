@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Бар (Дика історія) / El bar
+personalRating: "8"
 slug: el-bar
 date: 2021-04-04T16:15:19.899Z
 featuredimage: /img/maxresdefault-1-.jpg
