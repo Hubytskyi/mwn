@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Божевільна / Unsane
+personalRating: "10"
 slug: unsane
 date: 2021-04-04T16:31:51.027Z
 featuredimage: /img/3504.jpg
