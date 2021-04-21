@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Люпен / Lupin
+personalRating: "9"
 slug: lupin
 date: 2021-04-04T16:12:23.505Z
 featuredimage: /img/311c359b87264224a1bc2ed07099.jpg
