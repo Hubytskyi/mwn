@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Державні таємниці / Official Secrets
+personalRating: "10"
 slug: officials-secrets
 date: 2021-04-04T16:03:03.119Z
 featuredimage: /img/big_startfilmru1427902.jpg
