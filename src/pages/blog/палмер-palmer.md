@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Палмер / Palmer
+personalRating: "10"
 slug: palmer
 date: 2021-04-04T16:09:38.842Z
 featuredimage: /img/palmer_photo_0102-pic4_zoom-1500x1500-84374.jpg
