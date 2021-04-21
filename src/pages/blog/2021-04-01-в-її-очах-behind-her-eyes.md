@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: В її очах / Behind Her Eyes
+personalRating: "10"
 slug: behind-her-eyes
 date: 2021-04-01T19:33:51.418Z
 description: ""
