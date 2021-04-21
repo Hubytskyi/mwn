@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Відіграти Назад / The Undoing
+personalRating: "10"
 slug: the-undoing
 date: 2021-04-04T17:46:05.850Z
 featuredimage: /img/960x540.webp
