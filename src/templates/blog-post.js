@@ -20,7 +20,7 @@ export const BlogPostTemplate = ({
                                      imdb,
                                      personalRating
                                  }) => {
-    console.log(personalRating)
+
     const PostContent = contentComponent || Content
 
     return (
