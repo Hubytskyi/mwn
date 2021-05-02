@@ -8,6 +8,7 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
+    console.log(posts)
     const postLinks = posts.map((post) => (
         <li className="post__card" key={post.node.id}>
           <article
@@ -29,7 +30,7 @@ class TagRoute extends React.Component {
               <div className="post__meta">
                 <Link
                     className="post__title"
-                    to={post.node.fields.slug}
+                    to={'/'+post.node.frontmatter.slug}
                 >
                   <h2>{post.node.frontmatter.title}</h2>
                 </Link>

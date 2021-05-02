@@ -18,9 +18,8 @@ export const BlogPostTemplate = ({
                                      title,
                                      helmet,
                                      imdb,
-                                     personalRating
+                                     personalRating,
                                  }) => {
-
     const PostContent = contentComponent || Content
 
     return (
@@ -103,6 +102,12 @@ export const BlogPostTemplate = ({
                         <div className="article__short-description">
                             {description}
                         </div>
+                        <div className="article__trailer">
+                            <iframe src="https://www.youtube.com/embed/J_-nk9-sMus"
+                                    title="YouTube video player" frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen></iframe>
+                        </div>
                         <div className="article__content">
                             <PostContent content={content}/>
                         </div>
@@ -165,18 +170,18 @@ BlogPost.propTypes = {
 export default BlogPost
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
-        description
-        imdbid
-        tags
-        personalRating
-      }
+    query BlogPostByID($id: String!) {
+        markdownRemark(id: { eq: $id }) {
+            id
+            html
+            frontmatter {
+                date(formatString: "MMMM DD, YYYY")
+                title
+                description
+                imdbid
+                tags
+                personalRating
+            }
+        }
     }
-  }
 `
