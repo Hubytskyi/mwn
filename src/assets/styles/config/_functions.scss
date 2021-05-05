@@ -1,0 +1,33 @@
+/* Default screen size (Full-HD) */
+$def_screen1920: 1920;
+$def_screen1600: 1600;
+$def_screen1366: 1366;
+$def_screen1024: 1024;
+$def_screen768: 768;
+$def_screen576: 576;
+
+/* Convert px to vw */
+@function vw1920($target) {
+  $vw-context: ($def_screen1920 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+@function vw1600($target) {
+  $vw-context: ($def_screen1600 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+@function vw1366($target) {
+  $vw-context: ($def_screen1366 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+@function vw1024($target) {
+  $vw-context: ($def_screen1024 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+@function vw768($target) {
+  $vw-context: ($def_screen768 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+@function vw576($target) {
+  $vw-context: ($def_screen576 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}

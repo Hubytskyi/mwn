@@ -3,11 +3,10 @@ import PropTypes from 'prop-types'
 import {kebabCase} from 'lodash'
 import {Helmet} from 'react-helmet'
 import {graphql, Link} from 'gatsby'
-import Layout from '../components/Layout'
-import Content, {HTMLContent} from '../components/Content'
+import MainLayout from '../components/layouts/MainLayout'
 import axios from 'axios';
-import star from '../img/star.svg'
-import star2 from '../img/star2.svg'
+import star from '../assets/images/star.svg'
+import star2 from '../assets/images/star2.svg'
 import {i18n} from "../i18n";
 
 export const BlogPostTemplate = ({
@@ -20,7 +19,6 @@ export const BlogPostTemplate = ({
                                      imdb,
                                      personalRating,
                                  }) => {
-    const PostContent = contentComponent || Content
 
     return (
         <section className="article">
@@ -102,14 +100,9 @@ export const BlogPostTemplate = ({
                         <div className="article__short-description">
                             {description}
                         </div>
-                        <div className="article__trailer">
-                            <iframe src="https://www.youtube.com/embed/J_-nk9-sMus"
-                                    title="YouTube video player" frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen></iframe>
-                        </div>
                         <div className="article__content">
-                            <PostContent content={content}/>
+                            {/*<PostContent content={content}/>*/}
+                            content
                         </div>
                     </div>
                 </div>
@@ -138,10 +131,9 @@ const BlogPost = ({data}) => {
     }, [])
 
     return (
-        <Layout>
+        <MainLayout>
             <BlogPostTemplate
                 content={post.html}
-                contentComponent={HTMLContent}
                 description={post.frontmatter.description}
                 imdb={imdb}
                 personalRating={post.frontmatter.personalRating}
@@ -157,7 +149,7 @@ const BlogPost = ({data}) => {
                 tags={post.frontmatter.tags}
                 title={post.frontmatter.title}
             />
-        </Layout>
+        </MainLayout>
     )
 }
 

@@ -1,14 +1,12 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import MainLayout from '../components/layouts/MainLayout'
 import {i18n} from "../i18n";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
-    console.log(posts)
     const postLinks = posts.map((post) => (
         <li className="post__card" key={post.node.id}>
           <article
@@ -19,12 +17,6 @@ class TagRoute extends React.Component {
             <header>
               {post.node.frontmatter.featuredimage ? (
                   <div className="post__thumbnail">
-                    <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.node.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.node.frontmatter.title}`,
-                        }}
-                    />
                   </div>
               ) : null}
               <div className="post__meta">
@@ -57,7 +49,7 @@ class TagRoute extends React.Component {
     const tagHeader = `${totalCount} в категорії ${i18n(`genre.${tag}`)}`
 
     return (
-      <Layout>
+      <MainLayout>
         <section className="tags-posts">
           <Helmet title={`${tag} | ${title}`} />
           <div className="container">
@@ -70,7 +62,7 @@ class TagRoute extends React.Component {
             </div>
           </div>
         </section>
-      </Layout>
+      </MainLayout>
     )
   }
 }

@@ -28,25 +28,25 @@ module.exports = {
         "display": "standalone",
         "orientation": "portrait",
         "start_url": `/`,
-        icon: `src/img/favs/icon-192x192.png`,
+        icon: `src/assets/images/favs/icon-192x192.png`,
         "icons": [
           {
-            "src": `src/img/favs/icon-192x192.png`,
+            "src": `src/assets/images/favs/icon-192x192.png`,
             "sizes": "192x192",
             "type": "image/png"
           },
           {
-            "src": `src/img/favs/icon-256x256.png`,
+            "src": `src/assets/images/favs/icon-256x256.png`,
             "sizes": "256x256",
             "type": "image/png"
           },
           {
-            "src": `src/img/favs/icon-384x384.png`,
+            "src": `src/assets/images/favs/icon-384x384.png`,
             "sizes": "384x384",
             "type": "image/png"
           },
           {
-            "src": `src/img/favs/icon-512x512.png`,
+            "src": `src/assets/images/favs/icon-512x512.png`,
             "sizes": "512x512",
             "type": "image/png"
           }
@@ -74,7 +74,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/img`,
+        path: `${__dirname}/src/assets/images`,
         name: 'images',
       },
     },

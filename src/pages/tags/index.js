@@ -2,7 +2,7 @@ import React from 'react'
 import {kebabCase} from 'lodash'
 import {Helmet} from 'react-helmet'
 import {Link, graphql} from 'gatsby'
-import Layout from '../../components/Layout'
+import MainLayout from '../../components/layouts/MainLayout'
 import {i18n} from "../../i18n";
 
 const TagsPage = ({
@@ -13,7 +13,7 @@ const TagsPage = ({
                           },
                       },
                   }) => (
-    <Layout>
+    <MainLayout>
         <section className="tags">
             <Helmet title={`Tags | ${title}`}/>
             <div className="container">
@@ -31,7 +31,7 @@ const TagsPage = ({
                 </div>
             </div>
         </section>
-    </Layout>
+    </MainLayout>
 )
 
 export default TagsPage

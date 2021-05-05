@@ -1,23 +1,19 @@
 import React from 'react'
-import Layout from '../components/Layout'
-import BlogRoll from '../components/BlogRoll'
-import Tags from "../components/Tags";
+import MainLayout from '../components/layouts/MainLayout'
+import PostsCategory from "../components/templates/PostsCategory";
 
-const Index = () => {
+const HomePage = () => {
     return (
-        <Layout>
+        <MainLayout>
             <section className="section">
                 <div className="container">
-                    <div className="row row__category">
-                        <Tags/>
-                    </div>
                     <div className="row">
-                        <BlogRoll/>
+                        <PostsCategory/>
                     </div>
                 </div>
             </section>
-        </Layout>
+        </MainLayout>
     )
 }
 
-export default Index;
+export default HomePage;
