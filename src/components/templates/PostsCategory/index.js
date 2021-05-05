@@ -49,7 +49,6 @@ const PostsCategory = () => (
             return (
                 <ul className="posts__category">
                     {data.allMarkdownRemark.group.map(el => {
-                        console.log(el)
                         return (
                             <li className="posts__category-item" key={el.fieldValue}>
                                 <div className="post__category-header">
