@@ -100,10 +100,7 @@ export const BlogPostTemplate = ({
                         <div className="article__short-description">
                             {description}
                         </div>
-                        <div className="article__content">
-                            {/*<PostContent content={content}/>*/}
-                            content
-                        </div>
+                        <div className="article__content" dangerouslySetInnerHTML={{__html: content}}/>
                     </div>
                 </div>
             </div>

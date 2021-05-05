@@ -5,7 +5,7 @@ export const usePostsCategoryQuery = () => {
         graphql`
             query PostsCategoryQuery{
                 allMarkdownRemark {
-                    group(field: frontmatter___tags) {
+                    group(field: frontmatter___tags, limit: 10) {
                         fieldValue
                         edges {
                             node {

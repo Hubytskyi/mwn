@@ -1,36 +1,34 @@
-import React, {useRef, useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "gatsby"
-import videoo from "../../../assets/video/lupin.mp4"
+import ReactPlayer from 'react-player'
 
 const PostCard = ({post}) => {
 
-    const refVideo = useRef(null);
-
-    useEffect(() => {
-        if (!refVideo.current) {
-            return;
-        }
-        refVideo.current.defaultMuted = true;
-        refVideo.current.muted = true;
-
-    }, []);
-
-    console.log(post)
-
     return (
         <li className="post__item">
-            <Link to={post.frontmatter.slug} className="post__item-link"
-                // onMouseOver={playVideo}
-                // onMouseLeave={pauseVideo}>
+            <Link to={'/'+ post.frontmatter.slug} className="post__item-link"
+                // onMouseOver={() => {
+                //     setPlay({play: true})
+                // }}
+                // onMouseLeave={() => {
+                //     setPlay({play: false})
+                // }}
             >
                 <div className="post__item-image">
-                    <video className="post__item-video"
-                           poster={post.frontmatter.featuredimage.childImageSharp.fluid.src} ref={refVideo}
-                           autoPlay>
-                        <source src={post.frontmatter.trailer} type="video/mp4"/>
-                    </video>
+                    {/*{play ? <ReactPlayer*/}
+                    {/*    className='post__item-video'*/}
+                    {/*    url={post.frontmatter.trailer}*/}
+                    {/*    width='100%'*/}
+                    {/*    height='100%'*/}
+                    {/*    playing={true}*/}
+                    {/*    loop={true}*/}
+                    {/*    muted={true}*/}
+                    {/*/> : <img className="post__item-img" src={post.frontmatter.featuredimage.childImageSharp.fluid.src}*/}
+                    {/*          alt="" style={{display: 'none'}}/>}*/}
                     <img className="post__item-img" src={post.frontmatter.featuredimage.childImageSharp.fluid.src}
-                         alt="" style={{display: 'none'}}/>
+                           alt="" />
+                    <img className="post__item-img" src={post.frontmatter.featuredimage.childImageSharp.fluid.src}
+                         alt=""/>
                 </div>
                 <div className="post__item-text">
                     <h5 className="post__item-title">{post.frontmatter.title}</h5>

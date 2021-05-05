@@ -20,8 +20,11 @@
   margin-bottom: 40px;
 }
 
-.posts__category-title {
-  margin-bottom: 15px;
+.post__category-header {
+  margin-bottom: $gap / 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .post__item {
@@ -97,6 +100,22 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 
+  /* Media */
+  @include laptop {
+    @include font(vw1600(16px), vw1600(18px));
+  }
+  @include large {
+    @include font(vw1366(16px), vw1366(18px));
+  }
+  @include tabletL {
+    @include font(vw1024(16px), vw1024(18px));
+  }
+  @include tablet {
+    @include font(vw768(16px), vw768(18px));
+  }
+  @include mobile {
+    @include font(16px, 18px);
+  }
 }
 
 

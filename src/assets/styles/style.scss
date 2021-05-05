@@ -53,6 +53,9 @@ body {
   height: inherit;
   max-width: 100%;
   overflow: hidden;
+  @include tabletL {
+    margin: 0 15px;
+  }
 }
 
 a {

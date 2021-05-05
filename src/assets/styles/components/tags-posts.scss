@@ -1,18 +1,22 @@
-.tags-posts {
-  .taglist {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: $gap;
-    grid-row-gap: $gap;
-    margin-bottom: $gap;
+.tag-posts__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: $gap;
+  margin-bottom: $gap * 2;
 
-    /* Media */
-    @include tablet {
-      grid-template-columns: 1fr;
-    }
+  /* Media */
+  @include tabletL {
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
   }
 }
 
-.tags-posts__title {
+.tag-posts__title {
   margin-bottom: $gap;
 }

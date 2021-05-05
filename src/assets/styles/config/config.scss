@@ -121,6 +121,23 @@ h4 {
 
 h5 {
   @include font(vw1920(24px), vw1920(30px));
+
+  /* Media */
+  @include laptop {
+    @include font(vw1600(24px), vw1600(30px));
+  }
+  @include large {
+    @include font(vw1366(24px), vw1366(30px));
+  }
+  @include tabletL {
+    @include font(vw1024(24px), vw1024(30px));
+  }
+  @include tablet {
+    @include font(vw768(24px), vw768(30px));
+  }
+  @include mobile {
+    @include font(20px, 26px);
+  }
 }
 
 h6 {

@@ -1,10 +1,13 @@
 import React from "react";
-import {graphql, StaticQuery} from "gatsby";
-import PostCard from "../../layouts/PostCard";
+import {graphql, StaticQuery, Link} from "gatsby";
+import {kebabCase} from 'lodash'
+import IconButton from "@material-ui/core/IconButton";
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
+import PostCard from "../../layouts/PostCard";
 import {i18n} from "../../../i18n";
 
 SwiperCore.use([Navigation]);
@@ -15,7 +18,7 @@ const PostsCategory = () => (
         query={graphql`
           query {
             allMarkdownRemark {
-                group(field: frontmatter___tags) {
+                group(field: frontmatter___tags, limit: 10) {
                     fieldValue
                           edges {
                             node {
@@ -46,15 +49,34 @@ const PostsCategory = () => (
             return (
                 <ul className="posts__category">
                     {data.allMarkdownRemark.group.map(el => {
+                        console.log(el)
                         return (
                             <li className="posts__category-item" key={el.fieldValue}>
-                                <h2 className="posts__category-title">{i18n(`genre.${el.fieldValue}`)}</h2>
+                                <div className="post__category-header">
+                                    <h2 className="posts__category-title">{i18n(`genre.${el.fieldValue}`)}</h2>
+                                    <Link to={`/tags/${kebabCase(el.fieldValue)}/`}>
+                                        <IconButton>
+                                            <ArrowForwardIcon/>
+                                        </IconButton>
+                                    </Link>
+                                </div>
                                 <ul className="posts__list">
                                     <Swiper
                                         className="post__card--swiper"
                                         spaceBetween={5}
-                                        slidesPerView={4.3}
+                                        slidesPerView={1.1}
                                         navigation
+                                        breakpoints={{
+                                            768: {
+                                                slidesPerView: 2.2,
+                                            },
+                                            1024: {
+                                                slidesPerView: 3.3,
+                                            },
+                                            1366: {
+                                                slidesPerView: 4.3,
+                                            },
+                                        }}
                                         // onSlideChange={() => console.log('slide change')}
                                         // onSwiper={(swiper) => console.log(swiper)}
                                     >
