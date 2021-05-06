@@ -1,30 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {Link} from "gatsby"
-// import ReactPlayer from 'react-player'
 
 const PostCard = ({post}) => {
 
     return (
         <li className="post__item">
-            <Link to={'/'+ post.frontmatter.slug} className="post__item-link"
-                // onMouseOver={() => {
-                //     setPlay({play: true})
-                // }}
-                // onMouseLeave={() => {
-                //     setPlay({play: false})
-                // }}
-            >
+            <Link to={'/'+ post.frontmatter.slug} className="post__item-link">
                 <div className="post__item-image">
-                    {/*{play ? <ReactPlayer*/}
-                    {/*    className='post__item-video'*/}
-                    {/*    url={post.frontmatter.trailer}*/}
-                    {/*    width='100%'*/}
-                    {/*    height='100%'*/}
-                    {/*    playing={true}*/}
-                    {/*    loop={true}*/}
-                    {/*    muted={true}*/}
-                    {/*/> : <img className="post__item-img" src={post.frontmatter.featuredimage.childImageSharp.fluid.src}*/}
-                    {/*          alt="" style={{display: 'none'}}/>}*/}
                     <img className="post__item-img" src={post.frontmatter.featuredimage.childImageSharp.fluid.src}
                            alt="" />
                     <img className="post__item-img" src={post.frontmatter.featuredimage.childImageSharp.fluid.src}
