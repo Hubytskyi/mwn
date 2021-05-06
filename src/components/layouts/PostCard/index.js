@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Link} from "gatsby"
-import ReactPlayer from 'react-player'
+// import ReactPlayer from 'react-player'
 
 const PostCard = ({post}) => {
 
