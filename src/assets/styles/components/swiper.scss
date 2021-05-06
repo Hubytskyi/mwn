@@ -39,6 +39,10 @@
     &.swiper-button-disabled {
       opacity: 0;
     }
+
+    @include tabletL {
+      display: none;
+    }
   }
 
   .swiper-button-prev {
