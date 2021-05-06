@@ -81,12 +81,7 @@ const PostsCategory = () => (
                                     >
                                     {el.edges.map(post => {
                                         return (
-                                            <SwiperSlide>
-                                                <PostCard
-                                                    post={post.node}
-                                                    key={post.node.frontmatter.imdbid}
-                                                />
-                                            </SwiperSlide>
+                                            <SwiperSlide key={post.node.frontmatter.imdbid}><PostCard post={post.node}/></SwiperSlide>
                                         )
                                     })}
                                     </Swiper>
