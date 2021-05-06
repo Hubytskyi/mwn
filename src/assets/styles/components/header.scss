@@ -1,3 +1,9 @@
 #header {
   padding: $gap 0;
 }
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
