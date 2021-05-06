@@ -1,4 +1,4 @@
-@mixin arrowShadow {
+@mixin swiperArrowShadow {
   content: '';
   position: absolute;
   height: 100%;
@@ -7,6 +7,16 @@
   top: 0;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(40, 40, 40, 1) 100%);
   z-index: 2;
+}
+
+@mixin swiperArrow {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none !important;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: initial;
+  line-height: 1;
 }
 
 .post__card--swiper {
@@ -54,8 +64,13 @@
     right: auto;
 
     &::before {
-      @include arrowShadow;
-      background: linear-gradient(90deg, rgba(249,249,249,1) 0%, rgba(249,249,249,0) 100%);
+      @include swiperArrowShadow;
+      background: linear-gradient(90deg, rgba(249, 249, 249, 1) 0%, rgba(249, 249, 249, 0) 100%);
+    }
+
+    &::after {
+      content: 'prev';
+      @include swiperArrow;
     }
   }
 
@@ -64,8 +79,13 @@
     left: auto;
 
     &::before {
-      @include arrowShadow;
-      background: linear-gradient(90deg, rgba(40,40,40,0) 0%, rgba(249,249,249,1) 100%);
+      @include swiperArrowShadow;
+      background: linear-gradient(90deg, rgba(40, 40, 40, 0) 0%, rgba(249, 249, 249, 1) 100%);
+    }
+
+    &::after {
+      content: 'next';
+      @include swiperArrow;
     }
   }
 

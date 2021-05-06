@@ -63,7 +63,7 @@ const PostsCategory = () => (
                                     <Swiper
                                         navigation
                                         className="post__card--swiper"
-                                        spaceBetween={5}
+                                        spaceBetween={10}
                                         slidesPerView={1.1}
                                         breakpoints={{
                                             768: {
