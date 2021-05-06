@@ -6,7 +6,7 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/navigation/navigation.min.css';
 import PostCard from "../../layouts/PostCard";
 import {i18n} from "../../../i18n";
 
