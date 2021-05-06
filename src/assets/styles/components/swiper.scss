@@ -30,6 +30,10 @@
     top: 0;
     margin-top: 0;
     width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
 
     &:after {
       color: $dark;
@@ -47,6 +51,7 @@
 
   .swiper-button-prev {
     left: 0;
+    right: auto;
 
     &::before {
       @include arrowShadow;
@@ -56,6 +61,7 @@
 
   .swiper-button-next {
     right: 0;
+    left: auto;
 
     &::before {
       @include arrowShadow;
@@ -78,6 +84,10 @@
 
     &:hover {
       transform: scale(1.05);
+
+      @include tabletL {
+        transform: scale(1);
+      }
     }
 
     &-active {
