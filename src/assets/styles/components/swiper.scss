@@ -11,12 +11,21 @@
 
 @mixin swiperArrow {
   font-family: swiper-icons;
-  font-size: var(--swiper-navigation-size);
+  font-size: vw1920(32px);
   text-transform: none !important;
   letter-spacing: 0;
   text-transform: none;
   font-variant: initial;
   line-height: 1;
+  cursor: pointer;
+
+  /* Media */
+  @include laptop {
+    font-size: vw1600(32px);
+  }
+  @include large {
+    font-size: vw1366(32px);
+  }
 }
 
 .post__card--swiper {
@@ -108,10 +117,6 @@
       @include tabletL {
         transform: scale(1);
       }
-    }
-
-    &-active {
-      transform-origin: left;
     }
   }
 }
