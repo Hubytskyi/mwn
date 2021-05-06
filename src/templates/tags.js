@@ -23,7 +23,7 @@ class TagRoute extends React.Component {
       <MainLayout>
         <section className="tag-posts">
           <Helmet title={`${tag} | ${title}`} />
-          <div className="container">
+          <div className="container container-padding">
             <div className="row">
               <h3 className="tag-posts__title">{tagHeader}</h3>
               <ul className="tag-posts__list">{postLinks}</ul>
