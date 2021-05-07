@@ -11,7 +11,6 @@ import {i18n} from "../i18n";
 
 export const BlogPostTemplate = ({
                                      content,
-                                     contentComponent,
                                      description,
                                      tags,
                                      title,

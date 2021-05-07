@@ -1,6 +1,6 @@
 import {graphql, useStaticQuery} from "gatsby";
 
-export const usePostsCategoryQuery = () => {
+const usePostsCategoryQuery = () => {
     const data = useStaticQuery(
         graphql`
             query PostsCategoryQuery{
@@ -9,6 +9,7 @@ export const usePostsCategoryQuery = () => {
                         fieldValue
                         edges {
                             node {
+                                html
                                 frontmatter {
                                     title
                                     trailer
@@ -34,3 +35,5 @@ export const usePostsCategoryQuery = () => {
     )
     return data
 }
+
+export default usePostsCategoryQuery

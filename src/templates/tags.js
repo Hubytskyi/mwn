@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import MainLayout from '../components/layouts/MainLayout'
 import {i18n} from "../i18n";
-import PostCard from "../components/layouts/PostCard";
+import PostCard from "../components/templates/PostCard";
 
 class TagRoute extends React.Component {
   render() {

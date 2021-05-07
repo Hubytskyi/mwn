@@ -26,7 +26,24 @@
 }
 
 section {
-  padding: vw1920(40px) 0;
+  padding: vw1920($gap) 0;
+
+  /* Media */
+  @include laptop {
+    padding: vw1600($gap) 0;
+  }
+  @include large {
+    padding: vw1366($gap) 0;
+  }
+  @include tabletL {
+    padding: vw1024($gap) 0;
+  }
+  @include tablet {
+    padding: vw768($gap) 0;
+  }
+  @include mobile {
+    padding: $gap 0;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
