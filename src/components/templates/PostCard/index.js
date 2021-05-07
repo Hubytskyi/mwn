@@ -30,8 +30,6 @@ const PostCard = ({post}) => {
 
     const classes = useStyles();
 
-    console.log(post)
-
     return (
         <Card>
             <CardActionArea>
