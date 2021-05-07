@@ -16,10 +16,10 @@ const useStyles = makeStyles({
         overflow: "hidden"
     },
     description: {
-        lineClamp: 5,
+        lineClamp: 3,
         overflow: "hidden",
         display: "-webkit-box",
-        "-webkit-line-clamp": 5,
+        "-webkit-line-clamp": 3,
         "-webkit-box-orient": "vertical",
     },
     media: {
@@ -29,6 +29,8 @@ const useStyles = makeStyles({
 const PostCard = ({post}) => {
 
     const classes = useStyles();
+
+    console.log(post)
 
     return (
         <Card>
