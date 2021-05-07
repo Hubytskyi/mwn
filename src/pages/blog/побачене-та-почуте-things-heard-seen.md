@@ -5,7 +5,7 @@ personalRating: "9"
 slug: things-heard-and-seen
 date: 2021-05-07T16:24:23.364Z
 description: ""
-featuredimage: /images/things-seen-and-heard.jpg
+featuredimage: /images/things_heard___seen_00_18_31_02r.0.jpg
 tags:
   - Drama
   - Horror
