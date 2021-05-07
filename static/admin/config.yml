@@ -29,7 +29,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "IMDbID", name: "imdbid", widget: "string"}
-      - {label: "Trailer", name: "trailer", widget: "string"}
+      - {label: "Trailer", name: "trailer", widget: "string", required: false}
 
   - name: "pages"
     label: "Pages"

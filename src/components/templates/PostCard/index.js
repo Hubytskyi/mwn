@@ -27,6 +27,7 @@ const useStyles = makeStyles({
     },
 });
 const PostCard = ({post}) => {
+
     const classes = useStyles();
 
     return (
@@ -35,7 +36,7 @@ const PostCard = ({post}) => {
                 <Link to={'/' + post.frontmatter.slug}>
                     <CardMedia
                         className={classes.media}
-                        image={post.frontmatter.featuredimage.childImageSharp.fluid.src}
+                        image={post.frontmatter.featuredimage ? post.frontmatter.featuredimage.childImageSharp.fluid.src : ''}
                         title="Contemplative Reptile"
                     />
                     <CardContent>
