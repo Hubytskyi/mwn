@@ -49,10 +49,13 @@ const Contacts = () => {
             email: 'test@gmail.com',
             message: 'some message...'
         }
+        let myForm = document.getElementById('formFOrm');
+        let formData2 = new FormData(myForm)
+        console.log(formData2)
         fetch('/', {
             method: 'POST',
             headers: {"Content-Type": "application/x-www-form-urlencoded"},
-            body: new URLSearchParams(formData).toString()
+            body: new URLSearchParams(formData2).toString()
         }).then(() => console.log('Form successfully submitted')).catch((error) =>
             alert(error))
     }
@@ -66,47 +69,61 @@ const Contacts = () => {
                     <div className="row">
                         <div className={classes.wrapper}>
                             <h1 className={classes.title}>Contacts</h1>
-                            <form
-                                className={classes.root}
-                                noValidate
-                                autoComplete="off"
-                                name="contact"
-                                method="POST"
-                                data-netlify="true"
-                                onSubmit={handleSubmit}
-                            >
-                                <TextField
-                                    label="Ім'я"
-                                    variant="outlined"
-                                    type="text"
-                                    required
-                                    name="name"
-                                />
-                                <TextField
-                                    label="Email"
-                                    variant="outlined"
-                                    type="email"
-                                    required
-                                    name="email"
-                                />
-                                <TextField
-                                    id="outlined-multiline-static"
-                                    label="Повідомлення"
-                                    multiline
-                                    rows={8}
-                                    variant="outlined"
-                                    name="message"
-                                />
-                                <Button
-                                    variant="contained"
-                                    color="primary"
-                                    className={classes.button}
-                                    endIcon={<SendIcon/>}
-                                    type="submit"
-                                >
-                                    Відправити
-                                </Button>
+                            <form id="formFOrm" action="POST" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+                                <p>
+                                    <label>Your Name: <input type="text" name="name" /></label>
+                                </p>
+                                <p>
+                                    <label>Your Email: <input type="email" name="email" /></label>
+                                </p>
+                                <p>
+                                    <label>Message: <textarea name="message"></textarea></label>
+                                </p>
+                                <p>
+                                    <button type="submit">Send</button>
+                                </p>
                             </form>
+                            {/*<form*/}
+                            {/*    className={classes.root}*/}
+                            {/*    noValidate*/}
+                            {/*    autoComplete="off"*/}
+                            {/*    name="contact"*/}
+                            {/*    method="POST"*/}
+                            {/*    data-netlify="true"*/}
+                            {/*    onSubmit={handleSubmit}*/}
+                            {/*>*/}
+                            {/*    <TextField*/}
+                            {/*        label="Ім'я"*/}
+                            {/*        variant="outlined"*/}
+                            {/*        type="text"*/}
+                            {/*        required*/}
+                            {/*        name="name"*/}
+                            {/*    />*/}
+                            {/*    <TextField*/}
+                            {/*        label="Email"*/}
+                            {/*        variant="outlined"*/}
+                            {/*        type="email"*/}
+                            {/*        required*/}
+                            {/*        name="email"*/}
+                            {/*    />*/}
+                            {/*    <TextField*/}
+                            {/*        id="outlined-multiline-static"*/}
+                            {/*        label="Повідомлення"*/}
+                            {/*        multiline*/}
+                            {/*        rows={8}*/}
+                            {/*        variant="outlined"*/}
+                            {/*        name="message"*/}
+                            {/*    />*/}
+                            {/*    <Button*/}
+                            {/*        variant="contained"*/}
+                            {/*        color="primary"*/}
+                            {/*        className={classes.button}*/}
+                            {/*        endIcon={<SendIcon/>}*/}
+                            {/*        type="submit"*/}
+                            {/*    >*/}
+                            {/*        Відправити*/}
+                            {/*    </Button>*/}
+                            {/*</form>*/}
                         </div>
                     </div>
                 </div>
