@@ -69,7 +69,7 @@ const Contacts = () => {
                     <div className="row">
                         <div className={classes.wrapper}>
                             <h1 className={classes.title}>Contacts</h1>
-                            <form id="formFOrm" action="POST" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+                            <form id="formFOrm" action="POST" name="contact" method="POST" data-netlify="true" netlify onSubmit={handleSubmit}>
                                 <p>
                                     <label>Your Name: <input type="text" name="name" /></label>
                                 </p>
