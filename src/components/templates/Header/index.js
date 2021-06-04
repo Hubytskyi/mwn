@@ -204,7 +204,7 @@ export default function PrimarySearchAppBar() {
                     </IconButton>
                     <Typography className={classes.title} variant="h6" noWrap>
                         <Link to="/">
-                            Movies Worth Nothing
+                            Movies Worth Noting
                         </Link>
                     </Typography>
                     {/*<div className={classes.search}>*/}

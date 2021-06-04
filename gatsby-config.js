@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Movies Worth Nothing',
+    title: 'Movies Worth Noting',
     description:
       'What you want to see before bed.',
   },
@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        "name": "Movies Worth Nothing",
+        "name": "Movies Worth Noting",
         "short_name": "MWN",
         "theme_color": "#252B31",
         "background_color": "#252B31",
