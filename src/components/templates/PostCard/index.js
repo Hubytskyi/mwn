@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "gatsby"
 import {makeStyles} from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -51,9 +51,6 @@ const PostCard = ({post}) => {
                 </Link>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary">
-                    Поділитися
-                </Button>
                 <Button size="small" color="primary">
                     <Link style={{color: "#3f51b5"}} to={'/' + post.frontmatter.slug}>Перейти</Link>
                 </Button>

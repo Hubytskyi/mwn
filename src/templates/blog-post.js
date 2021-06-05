@@ -8,6 +8,7 @@ import axios from 'axios';
 import star from '../assets/images/star.svg'
 import star2 from '../assets/images/star2.svg'
 import {i18n} from "../i18n";
+import CardActions from "@material-ui/core/CardActions";
 
 export const BlogPostTemplate = ({
                                      content,
@@ -92,10 +93,17 @@ export const BlogPostTemplate = ({
                                             <td>Тривалість:</td>
                                             <td>{imdb.imdb.Runtime}</td>
                                         </tr>
+                                        <tr>
+                                            <td>Поділитись:</td>
+                                            <td>
+                                                <div className="s9-widget-wrapper"></div>
+                                            </td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div> : '...'}
+
                         <div className="article__short-description">
                             {description}
                         </div>
