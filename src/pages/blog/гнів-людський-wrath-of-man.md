@@ -4,6 +4,7 @@ title: Гнів людський / Wrath of Man
 personalRating: "10"
 slug: wrath-of-man
 date: 2021-06-04T19:47:56.338Z
+description: casca
 featuredimage: /images/wrath-of-man-release-date-theaters-jason-statham.jpg
 tags:
   - Action
