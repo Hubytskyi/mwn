@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Helmet} from 'react-helmet'
 import Footer from '../../templates/Footer'
 import Header from '../../templates/Header'
@@ -7,6 +7,42 @@ import useSiteMetadata from '../../SiteMetadata'
 import {withPrefix} from 'gatsby'
 
 const MainLayout = ({children}) => {
+
+    const loading = {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100vh',
+        backgroundColor: '#cdcdcd',
+        zIndex: '10000',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        overflow: 'hidden',
+        opacity: 1,
+        visibility: 'visible',
+        transition: '.25s'
+    }
+
+    const loaded = {
+        opacity: 0,
+        zIndex: -42,
+        visibility: 'hidden'
+    }
+
+
+    const [load, setLoad] = useState(false)
+
+    useEffect(() => {
+        setLoad(prevState => !prevState)
+    }, [])
+
+    if (load) {
+        document.body.style = 'overflow-y: auto'
+    }
+
+
     const {title, description} = useSiteMetadata()
     return (
         <div className="wrapper">
@@ -48,6 +84,14 @@ const MainLayout = ({children}) => {
                     content={`${withPrefix('/')}img/og-image.jpg`}
                 />
             </Helmet>
+            <div id="loader" style={!load ? loading : loaded}>
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M61.56 68L61.512 47.84L51.624 64.448H48.12L38.28 48.272V68H30.984V34.4H37.416L49.992 55.28L62.376 34.4H68.76L68.856 68H61.56Z"
+                        fill="#252B31"/>
+                    <circle cx="50" cy="50" r="48.5" stroke="#252B31" stroke-width="3"/>
+                </svg>
+            </div>
             <Header/>
             <div id="content">{children}</div>
             <Footer/>

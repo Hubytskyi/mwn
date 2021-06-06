@@ -8,6 +8,24 @@
 @import "components/tags-posts";
 @import "components/swiper";
 
+#loader {
+  circle {
+    animation: loading 2s infinite;
+    //transform-origin: center;
+  }
+}
+
+@keyframes loading {
+  from {
+    stroke-dasharray: 152;
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dasharray: 152;
+    stroke-dashoffset: -304;
+  }
+}
+
 body {
   @include font(vw1920($fontsize), vw1920($lineheight));
   background: $grey;
@@ -19,6 +37,7 @@ body {
   font-weight: normal;
   scroll-behavior: smooth;
   z-index: 0;
+  overflow-y: hidden;
 
   /* Media */
   @include laptop {
