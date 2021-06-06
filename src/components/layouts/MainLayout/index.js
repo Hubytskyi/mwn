@@ -20,15 +20,10 @@ const MainLayout = ({children}) => {
         justifyContent: 'center',
         alignItems: 'center',
         overflow: 'hidden',
-        opacity: 1,
-        visibility: 'visible',
-        transition: '.25s'
     }
 
     const loaded = {
-        opacity: 0,
-        zIndex: -42,
-        visibility: 'hidden'
+        display: 'none'
     }
 
 
