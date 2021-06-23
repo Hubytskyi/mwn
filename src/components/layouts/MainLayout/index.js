@@ -37,6 +37,7 @@ const MainLayout = ({children}) => {
         document.body.style = 'overflow-y: auto'
     }
 
+    console.log(withPrefix('/'))
 
     const {title, description} = useSiteMetadata()
     return (
@@ -49,24 +50,24 @@ const MainLayout = ({children}) => {
                 <link
                     rel="apple-touch-icon"
                     sizes="180x180"
-                    href={`${withPrefix('/')}img/apple-touch-icon.png`}
+                    href={`${withPrefix('/')}assets/images/apple-touch-icon.png`}
                 />
                 <link
                     rel="icon"
                     type="image/png"
-                    href={`${withPrefix('/')}img/favicon-32x32.png`}
+                    href={`${withPrefix('/')}assets/images/favicon-32x32.png`}
                     sizes="32x32"
                 />
                 <link
                     rel="icon"
                     type="image/png"
-                    href={`${withPrefix('/')}img/favicon-16x16.png`}
+                    href={`${withPrefix('/')}assets/images/favicon-16x16.png`}
                     sizes="16x16"
                 />
 
                 <link
                     rel="mask-icon"
-                    href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
+                    href={`${withPrefix('/')}assets/images/safari-pinned-tab.svg`}
                     color="#ff4400"
                 />
                 <meta name="theme-color" content="#fff"/>
@@ -76,7 +77,7 @@ const MainLayout = ({children}) => {
                 <meta property="og:url" content="/"/>
                 <meta
                     property="og:image"
-                    content={`${withPrefix('/')}img/og-image.jpg`}
+                    content={`${withPrefix('/')}assets/images//og-image.jpg`}
                 />
             </Helmet>
             <div id="loader" style={!load ? loading : loaded}>
