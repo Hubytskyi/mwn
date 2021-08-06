@@ -18,6 +18,10 @@ const useStyles = makeStyles(theme => ({
         gridColumnGap: 40
     },
 
+    playerEmpty: {
+        gridTemplateColumns: '1fr',
+    },
+
     [theme.breakpoints.down('md')]: {
         player: {
             gridTemplateColumns: '1fr',
@@ -37,7 +41,6 @@ export const BlogPostTemplate = ({
                                      url
                                  }) => {
     const classes = useStyles();
-    console.log(url)
 
     return (
         <section className="article">
@@ -122,11 +125,12 @@ export const BlogPostTemplate = ({
                                     </table>
                                 </div>
                             </div> : '...'}
-                        <Box className={classes.player}>
+                        <Box className={url ? classes.player : classes.playerEmpty}>
+                            {url &&
                             <iframe className="lazy"
-                                    src="https://becomeobsolete.thealloha.club/?token_movie=1a1826d5db22e0c284976516fe9bf2&amp;token=535999c79bbffe96a9e913e3b9cabe"
+                                    src={url}
                                     width="100%" height="370" frameBorder="0" allowFullScreen=""></iframe>
-
+                            }
                             <div className="article__content" dangerouslySetInnerHTML={{__html: content}}/>
                         </Box>
                     </div>

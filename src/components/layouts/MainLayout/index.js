@@ -37,8 +37,6 @@ const MainLayout = ({children}) => {
         document.body.style = 'overflow-y: auto'
     }
 
-    console.log(withPrefix('/'))
-
     const {title, description} = useSiteMetadata()
     return (
         <div className="wrapper">

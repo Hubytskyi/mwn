@@ -12,7 +12,6 @@ const Nav = () => {
     const newData = data.allMarkdownRemark.edges.map(el => {
         return {...el.node.frontmatter, objectID: el.node.id}
     })
-    console.log(newData)
 
     index
         .saveObjects(newData)
