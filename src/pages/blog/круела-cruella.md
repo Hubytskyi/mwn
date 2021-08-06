@@ -9,5 +9,6 @@ tags:
   - Comedy
   - Crime
 imdbid: tt3228774
+url: https://becomeobsolete.thealloha.club/?token_movie=b8d026c3b36aad7da6f6e3f724832a&token=535999c79bbffe96a9e913e3b9cabe
 ---
 Фільм розповість історію становлення самої легендарної бунтарки і наймоднішою лиходійки Disney Круелли де Віль. Дія відбувається в Лондоні 70-х років, охопленому зароджується культурою панк-року.
