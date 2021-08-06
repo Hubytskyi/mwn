@@ -207,20 +207,6 @@ export default function PrimarySearchAppBar() {
                             Movies Worth Noting
                         </Link>
                     </Typography>
-                    {/*<div className={classes.search}>*/}
-                    {/*    <div className={classes.searchIcon}>*/}
-                    {/*        <SearchIcon style={{color: '#282828'}}/>*/}
-                    {/*    </div>*/}
-                    {/*    <InputBase*/}
-                    {/*        placeholder="Search…"*/}
-                    {/*        classes={{*/}
-                    {/*            root: classes.inputRoot,*/}
-                    {/*            input: classes.inputInput,*/}
-                    {/*        }}*/}
-                    {/*        inputProps={{'aria-label': 'search'}}*/}
-                    {/*        style={{border: '1px solid #e0e3e5'}}*/}
-                    {/*    />*/}
-                    {/*</div>*/}
                     <div className={classes.grow}/>
                 </Toolbar>
             </AppBar>

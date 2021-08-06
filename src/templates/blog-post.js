@@ -8,7 +8,23 @@ import axios from 'axios';
 import star from '../assets/images/star.svg'
 import star2 from '../assets/images/star2.svg'
 import {i18n} from "../i18n";
-import CardActions from "@material-ui/core/CardActions";
+import {Box} from "@material-ui/core/";
+import {makeStyles} from "@material-ui/core/styles"
+
+const useStyles = makeStyles(theme => ({
+    player: {
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gridColumnGap: 40
+    },
+
+    [theme.breakpoints.down('md')]: {
+        player: {
+            gridTemplateColumns: '1fr',
+            gridRowGap: 40
+        },
+    }
+}))
 
 export const BlogPostTemplate = ({
                                      content,
@@ -18,7 +34,10 @@ export const BlogPostTemplate = ({
                                      helmet,
                                      imdb,
                                      personalRating,
+                                     url
                                  }) => {
+    const classes = useStyles();
+    console.log(url)
 
     return (
         <section className="article">
@@ -103,11 +122,13 @@ export const BlogPostTemplate = ({
                                     </table>
                                 </div>
                             </div> : '...'}
+                        <Box className={classes.player}>
+                            <iframe className="lazy"
+                                    src="https://becomeobsolete.thealloha.club/?token_movie=1a1826d5db22e0c284976516fe9bf2&amp;token=535999c79bbffe96a9e913e3b9cabe"
+                                    width="100%" height="370" frameBorder="0" allowFullScreen=""></iframe>
 
-                        <div className="article__short-description">
-                            {description}
-                        </div>
-                        <div className="article__content" dangerouslySetInnerHTML={{__html: content}}/>
+                            <div className="article__content" dangerouslySetInnerHTML={{__html: content}}/>
+                        </Box>
                     </div>
                 </div>
             </div>
@@ -140,6 +161,7 @@ const BlogPost = ({data}) => {
                 content={post.html}
                 description={post.frontmatter.description}
                 imdb={imdb}
+                url={post.frontmatter.url}
                 personalRating={post.frontmatter.personalRating}
                 helmet={
                     <Helmet titleTemplate="%s | Блог">
@@ -177,6 +199,7 @@ export const pageQuery = graphql`
                 imdbid
                 tags
                 personalRating
+                url
             }
         }
     }

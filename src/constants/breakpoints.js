@@ -3,7 +3,7 @@ const BREAKPOINTS = {
     sm: 768,
     md: 1024,
     lg: 1280,
-    xlg: 1400
+    xl: 1400
 }
 
 export default BREAKPOINTS
