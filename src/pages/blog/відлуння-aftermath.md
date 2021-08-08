@@ -7,7 +7,7 @@ date: 2021-08-08T19:25:08.269Z
 featuredimage: /images/aftermath-true-story-3.jpg
 tags:
   - Drama
-  - Horrow
+  - Horror
   - Mystery
 imdbid: tt10691162
 url: https://becomeobsolete.thealloha.club/?token_movie=818b8462eecf559c27cae49cb57ffe&token=535999c79bbffe96a9e913e3b9cabe
